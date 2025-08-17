@@ -4,5 +4,4 @@ icon: fas fa-info-circle
 order: 4
 ---
 
-> Add Markdown syntax content to file `_tabs/about.md`{: .filepath } and it will show up on this page.
-{: .prompt-tip }
+Estudiante de ciberseguridad enfocado a la seguridad ofensiva (pentesting). A través de este blog comparto write-ups de máquinas CTF, notas personales y todo lo que voy aprendiendo en el camino.
