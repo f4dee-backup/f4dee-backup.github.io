@@ -1,7 +1,7 @@
 ---
 title: "Nibbles"
 layout: "post"
-categories: [ "HTB - Retired Machines", "Easy" ]
+categories: [ "HTB - Retired Machines", "HTB - Easy" ]
 tags: [ "sudo", "nmap", "ffuf", "curl", "wappalyzer" ]
 ---
 
