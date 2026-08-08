@@ -1,7 +1,7 @@
 ---
 title: "BabyTwo"
 layout: "post"
-categories: [ "HTB - Retired Machines", "Medium", "Active Directory" ]
+categories: [ "HTB - Retired Machines", "HTB - Medium" ]
 tags: [ "nmap", "ntpdate", "netexec", "RID Cycling Attack", "lookupsid", "smbmap", "smbclient", "SYSVOL", "bloodhound-python", "BloodHound", "PowerView", "pyGPOAbuse" ]
 ---
 
