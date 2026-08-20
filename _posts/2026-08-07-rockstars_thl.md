@@ -1,7 +1,7 @@
 ---
 title: "Rockstars"
 layout: "post"
-categories: [ "The Hacker Labs", "THL - Easy" ]
+categories: [ "The Hackers Labs", "THL - Principiante" ]
 tags: [ "nmap", "whatweb", "ffuf", "sudo", "binary hijacking", "zip2john", "john", "hydra", "python library hijacking" ]
 ---
 
