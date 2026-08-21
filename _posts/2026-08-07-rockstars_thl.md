@@ -513,7 +513,7 @@ Tras un breve momento, obtengo acceso como el usuario `username3`.
 
 ```shell
 username3@TheHackersLabs-RockstarS:~$ cat user.txt 
-ASss31
+<NOTHING INTEREST HERE>
 ```
 
 ## PrivEsc
@@ -626,7 +626,7 @@ Finalmente obtengo la flag final.
 ```shell
 cat /root/root.txt 
 
-aSASDA12JJjadjasdthlrootddd
+<NOTHING INTEREST HERE>
 ```
 
 > De forma opcional, se puede obtener persistencia en la sesión de `root` añadiendo una clave pública propia, tal como se hizo previamente con `wvverez`.

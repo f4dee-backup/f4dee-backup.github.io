@@ -343,7 +343,7 @@ WINRM       10.10.10.147    5985   CHIMICHURRI      [+] chimichurri.thl\hacker:P
 
 Las credenciales son válidas y, además, la cuenta `hacker` dispone de acceso mediante WinRM. Con esto, ya dispongo de un punto de entrada interactivo al sistema y puedo continuar con la enumeración local de privilegios.
 
-## user.txt
+## Sesión como hacker
 
 Con las credenciales obtenidas anteriormente, accedo al sistema mediante **WinRM** utilizando `evil-winrm-py`.
 
@@ -567,10 +567,10 @@ Finalmente puedo obtener el contenido de ambas flags ;D
 
 ```powershell
 type C:\Users\hacker\Desktop\user.txt
-acrsgvs6edr8f5vaw9a8eadv6fa9b
+<NOTHING INTEREST HERE>
 
 type C:\Users\Administrador\Desktop\root.txt
-hjafcdv8a75e3cvsdfg6asd4f9vbsf9sa
+<NOTHING INTEREST HERE>
 ```
 
 Con esto completo la primera ruta de escalada: **`hacker` → `SeImpersonatePrivilege` → JuicyPotatoNG → `SYSTEM` → modificación de DACL → flags**.
@@ -757,7 +757,7 @@ CHIMICHURRI$:1001:aad3b435b51404eeaad3b435b51404ee:31d6cfe0d16ae931b73c59d7e0c08
 
 La extracción mediante **DRSUAPI** permite recuperar los secretos almacenados en Active Directory, incluyendo los hashes NTLM de las cuentas del dominio. Entre ellos se encuentra el hash de `Administrador`.
 
-### Pass-the-Hash como `Administrador`
+### Pass-the-Hash
 
 Con el hash obtenido puedo realizar un **Pass-the-Hash** contra SMB sin necesidad de conocer la contraseña en texto claro.
 
@@ -788,10 +788,10 @@ Ya tengo una sesión como **`Administrador`**. En consecuencia, puedo acceder di
 
 ```powershell
 type C:\Users\hacker\Desktop\user.txt
-acrsgvs6edr8f5vaw9a8eadv6fa9b
+<NOTHING INTEREST HERE>
 
 type C:\Users\Administrador\Desktop\root.txt
-hjafcdv8a75e3cvsdfg6asd4f9vbsf9sa
+<NOTHING INTEREST HERE>
 ```
 
 De esta forma, la segunda ruta de escalada queda resumida como: **Guest → Zerologon (`CVE-2020-1472`) → cuenta de máquina del DC → `secretsdump` → hash NTLM de `Administrador` → Pass-the-Hash → acceso administrativo.**
