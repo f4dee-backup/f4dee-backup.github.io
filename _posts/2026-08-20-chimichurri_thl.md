@@ -2,7 +2,7 @@
 title: "Chimichurri"
 layout: "post"
 categories: [ "The Hackers Labs", "THL - Principiante" ]
-tags: [ "nmap", "ntpdate", "netexec", "smbmap", "Jenkins", "Path Traversal", "SeImpersonatePrivilege", "JuicyPotatoNG", "icacls", "msfvenom", "certutil", "schtasks", "Zerologon", "secretsdump", "evil-winrm-py" ]
+tags: [ "nmap", "ntpdate", "netexec", "RID Cycling Attack", "smbmap", "whatweb", "SeImpersonatePrivilege", "JuicyPotatoNG", "icacls", "msfvenom", "certutil", "schtasks", "Zerologon", "secretsdump", "Pass-the-Hash", "evil-winrm-py" ]
 ---
 
 ## Info

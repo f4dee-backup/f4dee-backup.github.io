@@ -2,7 +2,7 @@
 title: "BabyTwo"
 layout: "post"
 categories: [ "HTB - Retired Machines", "HTB - Medium" ]
-tags: [ "nmap", "ntpdate", "netexec", "RID Cycling Attack", "lookupsid", "smbmap", "smbclient", "SYSVOL", "bloodhound-python", "BloodHound", "PowerView", "pyGPOAbuse" ]
+tags: [ "nmap", "ntpdate", "netexec", "RID Cycling Attack", "lookupsid", "user-as-pass", "smbmap", "smbclient", "SYSVOL", "BloodHound", "bloodhound-python", "WriteDacl", "PowerView", "GenericAll", "pyGPOAbuse", "Pass-the-Hash" ]
 ---
 
 ## Info

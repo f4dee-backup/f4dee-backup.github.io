@@ -15,7 +15,7 @@ En este post presentaré la resolución de la máquina **Redeemer** de Hack the 
 Primero verifico la disponibilidad del host: envío un paquete ICMP (mediante `ping`) al objetivo para confirmar que responde antes de proceder con escaneos más exhaustivos.
 
 ```shell
-❯ ping -c 1 10.129.166.144
+ping -c 1 10.129.166.144
 
 PING 10.129.166.144 (10.129.166.144) 56(84) bytes of data.
 64 bytes from 10.129.166.144: icmp_seq=1 ttl=63 time=126 ms
@@ -66,8 +66,7 @@ Antes de continuar, pequeño contexto sobre Redis:
 Con esto en mente, Redis ofrece varias [formas](https://redis.io/docs/latest/develop/tools/) para interactuar con el servidor, ya sea a través de **CLI** como a través de **GUI**. En este caso, usaré `redis-cli` para la enumeración, aunque también podrías optar por utilizar `nc` como alternativa.
 
 ```shell
-❯ redis-cli --help
-redis-cli 8.0.1
+redis-cli --help
 
 Usage: redis-cli [OPTIONS] [cmd [arg [arg ...]]]
   -h <hostname>      Server hostname (default: 127.0.0.1).
@@ -82,7 +81,7 @@ Usage: redis-cli [OPTIONS] [cmd [arg [arg ...]]]
 Tras revisar el panel de ayuda, muestra que se debe utilizar el parámetro `-h` para especificar la IP del host objetivo. Por lo tanto, para conectarnos al servidor en la IP `10.129.166.144`, se realiza la siguiente sintaxis.
 
 ```shell
-❯ redis-cli -h 10.129.166.144
+redis-cli -h 10.129.166.144
 10.129.166.144:6379> 
 ```
 

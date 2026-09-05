@@ -2,7 +2,7 @@
 title: "Fluffy"
 layout: "post"
 categories: [ "HTB - Retired Machines", "HTB - Easy" ]
-tags: [ "nmap", "ntpdate", "smbmap", "smbserver", "hashcat", "bloodhound-python", "net", "pywhisker", "netexec", "certipy", "evil-winrm" ]
+tags: [ "nmap", "ntpdate", "smbmap", "smbserver", "hashcat", "BloodHound", "bloodhound-python", "GenericAll", "GenericWrite", "Shadow Credentials", "net", "pyWhisker", "PKINIT tools", "netexec", "certipy-ad", "evil-winrm" ]
 ---
 
 ## Info
