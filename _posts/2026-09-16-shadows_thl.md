@@ -7,7 +7,7 @@ tags: [ "nmap", "ntpdate", "netexec", "lookupsid", "evil-winrm-py", "Zerologon",
 
 ## Info
 
-![Shadows](/assets/posts/2026-12-12-shadows_thl/01_shadows.png)
+![Shadows](/assets/posts/2026-09-16-shadows_thl/01_shadows.png)
 *Shadows - The Hackers Labs (Profesional)*
 
 Shadows es una máquina de dificultad Profesional de The Hackers Labs, enfocada en un entorno de Active Directory.
@@ -493,7 +493,7 @@ Después de un momento el proceso se completa y comienzo observando `Outbound Ob
 
 ### GenericAll
 
-![Shadows](/assets/posts/2026-12-12-shadows_thl/02_GenericAll.png)
+![Shadows](/assets/posts/2026-09-16-shadows_thl/02_GenericAll.png)
 *Shadow GenericAll over secadmin*
 
 Ok, entonces el usuario `Shadow` tiene permisos **GenericAll** sobre el usuario `secadmin`.
@@ -535,7 +535,7 @@ Bien, pues ahora revisaré los `Outbound Object Control` del usuario `secadmin`.
 
 ### ForceChangePassword
 
-![Shadows](/assets/posts/2026-12-12-shadows_thl/03_ForceChangePassword.png)
+![Shadows](/assets/posts/2026-09-16-shadows_thl/03_ForceChangePassword.png)
 *secadmin ForceChangePassword over svc_backup*
 
 BloodHound muestra el permiso **ForceChangePassword** sobre el usuario `svc_backup`.
@@ -626,7 +626,7 @@ Visito `localhost:9001` en mi navegador, cuyo contenido es el siguiente.
 
 ### Report 2026.pdf
 
-![Shadows](/assets/posts/2026-12-12-shadows_thl/04_report.png)
+![Shadows](/assets/posts/2026-09-16-shadows_thl/04_report.png)
 *Red Team Internal Report 2026.pdf - Password policy findings*
 
 > A modo de resumen: Este informe identifica que la empresa SHADOW.THL tienen un riesgo alto en la gestión de contraseñas. Se detectaron contraseñas predecibles y basadas en información de la organización, fechas, estaciones y patrones comunes, lo que facilita a un atacante realizar password spraying, fuerza bruta y password reuse. Lo que da lugar al compromiso de múltiples cuentas, y representa un riesgo significativo si entre ellas se ven afectadas cuentas privilegiadas.
@@ -777,7 +777,7 @@ Después de unos cuantos minutos, obtengo credenciales válidas.
 
 Ahora que tengo el control de este objeto, volveré a revisar `BloodHound` para identificar las posibilidades de movimiento lateral.
 
-![Shadows](/assets/posts/2026-12-12-shadows_thl/05_GenericWrite.png)
+![Shadows](/assets/posts/2026-09-16-shadows_thl/05_GenericWrite.png)
 *helpdesk GenericWrite over auditmgr*
 
 El usuario `helpdesk` dispone de permisos **GenericWrite** sobre el usuario `auditmgr` (entidad Tier Zero). Como tal, `GenericWrite` **NO** implica control total del objeto, pero permite modificar múltiples atributos que sean escribibles en ese contexto.
@@ -890,7 +890,7 @@ Con este acceso, continuaré revisando BloodHound para identificar las siguiente
 
 ## PrivEsc (Method 1 RBCD) 
 
-![Shadows](/assets/posts/2026-12-12-shadows_thl/06_GenericAll_AddSelf.png)
+![Shadows](/assets/posts/2026-09-16-shadows_thl/06_GenericAll_AddSelf.png)
 *auditmgr GenericAll over SEERVER$ / AddSelf over PlatformEngineering*
 
 Este usuario tiene dos permisos:
