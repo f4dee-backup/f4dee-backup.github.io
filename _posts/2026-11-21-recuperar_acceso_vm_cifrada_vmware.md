@@ -11,7 +11,7 @@ tags: [ "VMware Workstation Pro", "Windows 11", "vmx", "vTPM", "fast encryption"
 
 ![Error de autenticación](/assets/posts/2026-11-21-restore-access-to-vm-vmware/00_panic.png)
 
-> **Resumen:** Si cifraste la VM con **fast encryption** y ya no puedes entrar con tu contraseña, puedes quitar el cifrado editando el archivo `.vmx` y eliminando las líneas `encryption.*`, `vmx.encryptionType` y las del `vtpm`. **No recuperas la contraseña:** lo que haces es quitar el cifrado sin ella.
+> **Resumen:** Si cifraste la VM con **fast encryption** y ya no puedes entrar con tu contraseña, puedes quitar el cifrado editando el archivo `.vmx` y eliminando las líneas con coincidencias de `encryption` y `vtpm`. **No recuperas la contraseña:** lo que haces es quitar el cifrado sin ella.
 {: .prompt-info }
 
 Sin tanto relleno, vamos a ello.
