@@ -2,7 +2,7 @@
 title: "Jeeves"
 layout: "post"
 categories: [ "HTB - Retired Machines", "HTB - Medium" ]
-tags: [ "nmap", "whatweb", "ffuf", "wappalyzer", "jenkins", "groovy", "keepass2john", "john", "netexec", "impacket", "smbexec", "juicypotato", "ads" ]
+tags: [ "nmap", "whatweb", "ffuf", "wappalyzer", "jenkins", "keepass2john", "john", "netexec", "smbexec", "JuicyPotato", "Alternate Data Streams" ]
 ---
 
 ## Info
@@ -507,7 +507,7 @@ SeIncreaseWorkingSetPrivilege Increase a process working set            Disabled
 SeTimeZonePrivilege           Change the time zone                      Disabled
 ```
 
-## Abusando de SeImpersonatePrivilege
+### Abusando de SeImpersonatePrivilege
 
 > Tengo habilitado `SeImpersonatePrivilege`. El [MITRE ATT&CK T1134.001](https://attack.mitre.org/techniques/T1134/001/) documenta la técnica de **Token Impersonation/Theft**: cuando una cuenta de servicio tiene este privilegio, puede suplantar el token de otro proceso que se autentique contra ella, lo cual es la base de toda la familia de exploits **Potato** (RottenPotato, JuicyPotato, PrintSpoofer, RoguePotato, etc.) para escalar de cuenta de servicio a `NT AUTHORITY\SYSTEM`. Privilegio que también se presentó en la máquina [Chimichurri de THL](https://f4dee-backup.github.io/chimichurri_thl/#enumeraci%C3%B3n-de-privilegios)
 {: .prompt-info }
