@@ -16,7 +16,7 @@ timezone: America/Lima
 
 title: f4dee's blog # the main title
 
-tagline: Write-ups de CTF y notas prácticas de pentesting en español. # it will display as the subtitle
+tagline: Offensive Security && CTF Player # it will display as the subtitle
 
 description: >- # used by seo meta and the atom feed
   Write-ups de CTF, pentesting, Active Directory
